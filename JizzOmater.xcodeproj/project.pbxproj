@@ -16,6 +16,7 @@
 		FC05D9B81C978EC4006FB570 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05D9B61C978EC4006FB570 /* LaunchScreen.storyboard */; };
 		FC05D9C31C978EC4006FB570 /* JizzOmaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05D9C21C978EC4006FB570 /* JizzOmaterTests.swift */; };
 		FC05D9CE1C978EC4006FB570 /* JizzOmaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05D9CD1C978EC4006FB570 /* JizzOmaterUITests.swift */; };
+		FC05D9DC1C9792BC006FB570 /* nameFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05D9DB1C9792BC006FB570 /* nameFormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		FC05D9C91C978EC4006FB570 /* JizzOmaterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JizzOmaterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC05D9CD1C978EC4006FB570 /* JizzOmaterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JizzOmaterUITests.swift; sourceTree = "<group>"; };
 		FC05D9CF1C978EC4006FB570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC05D9DB1C9792BC006FB570 /* nameFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nameFormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				FC05D9B41C978EC4006FB570 /* Assets.xcassets */,
 				FC05D9B61C978EC4006FB570 /* LaunchScreen.storyboard */,
 				FC05D9B91C978EC4006FB570 /* Info.plist */,
+				FC05D9DB1C9792BC006FB570 /* nameFormViewController.swift */,
 			);
 			path = JizzOmater;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				FC05D9AE1C978EC4006FB570 /* GameScene.swift in Sources */,
 				FC05D9B01C978EC4006FB570 /* GameViewController.swift in Sources */,
 				FC05D9AA1C978EC4006FB570 /* AppDelegate.swift in Sources */,
+				FC05D9DC1C9792BC006FB570 /* nameFormViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,38 +7,25 @@
 //
 
 import SpriteKit
+import CoreMotion
 
 class GameScene: SKScene {
+    let manager = CMMotionManager()
+    
+    
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!"
-        myLabel.fontSize = 45
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
+        manager.startAccelerometerUpdates()
+        manager.accelerometerUpdateInterval = 0.2
+        manager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue()) {
+            (data, error) in
+            
+            self.physicsWorld.gravity = CGVectorMake(CGFloat((data?.acceleration.x)!) * 20, CGFloat((data?.acceleration.y)!)*20)
+        }
         
-        self.addChild(myLabel)
+        
+        
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-       /* Called when a touch begins */
-        
-        for touch in touches {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
-        }
-    }
-   
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }
