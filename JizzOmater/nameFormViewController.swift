@@ -7,20 +7,28 @@
 //
 
 import UIKit
+import MultipeerConnectivity
 
 
-class nameFormViewController: UIViewController {
+class nameFormViewController: UIViewController{
     
+    @IBAction func unwindToGame(segue: UIStoryboardSegue){}
+    @IBAction func  unwindToWinnerLogin(segue: UIStoryboardSegue){}
     
-    @IBAction func nameFormTextField(sender: UITextField) {
+    var userName = ""
+    
+    @IBOutlet weak var nicknameTextField: UITextField!
+    
+    @IBAction func playButtonPressed(sender: UIButton) {
     }
-    @IBAction func enterWaitingRoomCountdownButton(sender: UIButton) {
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         
     }
+    
+
+    
 }
 

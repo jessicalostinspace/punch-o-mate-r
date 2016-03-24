@@ -10,9 +10,13 @@ import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController {
-
+    
+    var maxValue: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var viewController: UIViewController?
 
         if let scene = GameScene(fileNamed:"GameScene") {
             // Configure the view.
@@ -26,9 +30,35 @@ class GameViewController: UIViewController {
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill
             
+            
+//            scene.viewController = self
+
+            
             skView.presentScene(scene)
+            
+            let seconds = 4.0
+            let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
+            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            
+            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+                
+                // here code perfomed with delay
+                print("4")
+                print(self.maxValue)
+                if self.maxValue <= 200{ //loser segue
+                self.performSegueWithIdentifier("gameSceneToFinalSegue", sender: viewController)
+                }
+                else{ //winner segue
+                self.performSegueWithIdentifier("gameSceneToWinnerSegue", sender: viewController)
+                }
+                
+            })
+            
+            
+            
         }
     }
+    
 
     override func shouldAutorotate() -> Bool {
         return true
@@ -50,4 +80,10 @@ class GameViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+
+    
+    
+
+    
 }
