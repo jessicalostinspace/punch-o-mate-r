@@ -17,9 +17,8 @@
 		FC05D9C31C978EC4006FB570 /* JizzOmaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05D9C21C978EC4006FB570 /* JizzOmaterTests.swift */; };
 		FC05D9CE1C978EC4006FB570 /* JizzOmaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05D9CD1C978EC4006FB570 /* JizzOmaterUITests.swift */; };
 		FC05D9DC1C9792BC006FB570 /* nameFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05D9DB1C9792BC006FB570 /* nameFormViewController.swift */; };
-		FC05D9DE1C97AE23006FB570 /* MPCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05D9DD1C97AE23006FB570 /* MPCManager.swift */; };
-		FC05D9E41C97BF79006FB570 /* UsersConnectedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05D9E31C97BF79006FB570 /* UsersConnectedTableViewController.swift */; };
 		FC5700C61CA3C7AE00C58C75 /* WinningFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5700C51CA3C7AE00C58C75 /* WinningFinalViewController.swift */; };
+		FC7A31F21CB4E630008BDF08 /* ConnectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7A31F11CB4E630008BDF08 /* ConnectionsTableViewController.swift */; };
 		FC92E06A1CA3A6FA0044A12C /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC92E0691CA3A6FA0044A12C /* FinalViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,9 +56,8 @@
 		FC05D9CD1C978EC4006FB570 /* JizzOmaterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JizzOmaterUITests.swift; sourceTree = "<group>"; };
 		FC05D9CF1C978EC4006FB570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC05D9DB1C9792BC006FB570 /* nameFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nameFormViewController.swift; sourceTree = "<group>"; };
-		FC05D9DD1C97AE23006FB570 /* MPCManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCManager.swift; sourceTree = "<group>"; };
-		FC05D9E31C97BF79006FB570 /* UsersConnectedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsersConnectedTableViewController.swift; path = ../UsersConnectedTableViewController.swift; sourceTree = "<group>"; };
 		FC5700C51CA3C7AE00C58C75 /* WinningFinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinningFinalViewController.swift; sourceTree = "<group>"; };
+		FC7A31F11CB4E630008BDF08 /* ConnectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewController.swift; sourceTree = "<group>"; };
 		FC92E0691CA3A6FA0044A12C /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,14 +110,13 @@
 			isa = PBXGroup;
 			children = (
 				FC05D9A91C978EC4006FB570 /* AppDelegate.swift */,
-				FC05D9E31C97BF79006FB570 /* UsersConnectedTableViewController.swift */,
 				FC05D9AB1C978EC4006FB570 /* GameScene.sks */,
 				FC05D9DB1C9792BC006FB570 /* nameFormViewController.swift */,
+				FC7A31F11CB4E630008BDF08 /* ConnectionsTableViewController.swift */,
 				FC05D9AD1C978EC4006FB570 /* GameScene.swift */,
 				FC05D9AF1C978EC4006FB570 /* GameViewController.swift */,
 				FC92E0691CA3A6FA0044A12C /* FinalViewController.swift */,
 				FC5700C51CA3C7AE00C58C75 /* WinningFinalViewController.swift */,
-				FC05D9DD1C97AE23006FB570 /* MPCManager.swift */,
 				FC05D9B11C978EC4006FB570 /* Main.storyboard */,
 				FC05D9B41C978EC4006FB570 /* Assets.xcassets */,
 				FC05D9B61C978EC4006FB570 /* LaunchScreen.storyboard */,
@@ -282,9 +279,8 @@
 				FC05D9AE1C978EC4006FB570 /* GameScene.swift in Sources */,
 				FC92E06A1CA3A6FA0044A12C /* FinalViewController.swift in Sources */,
 				FC05D9B01C978EC4006FB570 /* GameViewController.swift in Sources */,
-				FC05D9E41C97BF79006FB570 /* UsersConnectedTableViewController.swift in Sources */,
 				FC5700C61CA3C7AE00C58C75 /* WinningFinalViewController.swift in Sources */,
-				FC05D9DE1C97AE23006FB570 /* MPCManager.swift in Sources */,
+				FC7A31F21CB4E630008BDF08 /* ConnectionsTableViewController.swift in Sources */,
 				FC05D9AA1C978EC4006FB570 /* AppDelegate.swift in Sources */,
 				FC05D9DC1C9792BC006FB570 /* nameFormViewController.swift in Sources */,
 			);

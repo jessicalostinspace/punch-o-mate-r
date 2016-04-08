@@ -17,6 +17,11 @@ class GameScene: SKScene {
 
     var myLabel = SKLabelNode()
     
+    var sentScore = 0;
+    
+    var gameViewController: GameViewController!
+
+    var defaults = NSUserDefaults.standardUserDefaults()
     
 //    var viewController: UIViewController?
     
@@ -61,19 +66,17 @@ class GameScene: SKScene {
                 self.saveMaxValue(self.maxValue)
                 myLabel.text = String("Score: \(self.maxValue)")
                 
+                defaults.setObject(maxValue, forKey : "High_Score")
+                var highScore = defaults.objectForKey("High_Score")
+
                 
             }
         }
         
+        
     }
     
-    func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        
-        // pass data to next view
-        var gameViewController : GameViewController = segue.destinationViewController as! GameViewController
-        gameViewController.maxValue = maxValue
-        
-    }
+
     
     func saveMaxValue(value: Int) {
         print("Max Value \(value)")

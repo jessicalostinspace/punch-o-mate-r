@@ -12,23 +12,29 @@ import MultipeerConnectivity
 
 class nameFormViewController: UIViewController{
     
+    var nickName: String?
+    
     @IBAction func unwindToGame(segue: UIStoryboardSegue){}
     @IBAction func  unwindToWinnerLogin(segue: UIStoryboardSegue){}
-    
-    var userName = ""
-    
     @IBOutlet weak var nicknameTextField: UITextField!
-    
-    @IBAction func playButtonPressed(sender: UIButton) {
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        nickName = ""
         
     }
     
-
+    @IBAction func playButtonPressed(sender: UIButton) {
+        nickName = nicknameTextField.text!
+        
+        
+    }
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        let destinationNavigationController = segue.destinationViewController as! UINavigationController
+//        let targetController = destinationNavigationController.topViewController
+//    }
     
 }
 

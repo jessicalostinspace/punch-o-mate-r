@@ -11,12 +11,12 @@ import SpriteKit
 
 class GameViewController: UIViewController {
     
-    var maxValue: Int?
+    var defaults = NSUserDefaults.standardUserDefaults()
+    
+    var maxValue = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var viewController: UIViewController?
 
         if let scene = GameScene(fileNamed:"GameScene") {
             // Configure the view.
@@ -31,26 +31,19 @@ class GameViewController: UIViewController {
             scene.scaleMode = .AspectFill
             
             
-//            scene.viewController = self
-
+            scene.gameViewController = self
             
             skView.presentScene(scene)
             
-            let seconds = 4.0
+            let seconds = 5.0
             let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
             let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
             
             dispatch_after(dispatchTime, dispatch_get_main_queue(), {
                 
                 // here code perfomed with delay
-                print("4")
-                print(self.maxValue)
-                if self.maxValue <= 200{ //loser segue
-                self.performSegueWithIdentifier("gameSceneToFinalSegue", sender: viewController)
-                }
-                else{ //winner segue
-                self.performSegueWithIdentifier("gameSceneToWinnerSegue", sender: viewController)
-                }
+                self.segue()
+//              self.performSegueWithIdentifier("gameSceneToFinalSegue", sender: nil)
                 
             })
             
@@ -72,6 +65,19 @@ class GameViewController: UIViewController {
         }
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "gameSceneToFinalSegue"{
+            let navController = segue.destinationViewController as! UINavigationController
+            let controller = navController.topViewController as! FinalViewController
+            
+            var highScore = defaults.objectForKey("High_Score")
+            
+            controller.maxValue = highScore as! Int
+            print("----\(highScore!)------")
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
@@ -82,6 +88,9 @@ class GameViewController: UIViewController {
     }
     
 
+    func segue(){
+        self.performSegueWithIdentifier("gameSceneToFinalSegue", sender: self)
+    }
     
     
 
