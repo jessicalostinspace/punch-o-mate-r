@@ -43,8 +43,6 @@ class GameViewController: UIViewController {
                 
                 // here code perfomed with delay
                 self.segue()
-//              self.performSegueWithIdentifier("gameSceneToFinalSegue", sender: nil)
-                
             })
             
             
@@ -54,7 +52,7 @@ class GameViewController: UIViewController {
     
 
     override func shouldAutorotate() -> Bool {
-        return true
+        return false
     }
 
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
@@ -71,7 +69,7 @@ class GameViewController: UIViewController {
             let navController = segue.destinationViewController as! UINavigationController
             let controller = navController.topViewController as! FinalViewController
             
-            var highScore = defaults.objectForKey("High_Score")
+            let highScore = defaults.objectForKey("High_Score")
             
             controller.maxValue = highScore as! Int
             print("----\(highScore!)------")

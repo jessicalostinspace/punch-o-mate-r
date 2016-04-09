@@ -12,10 +12,10 @@ import MultipeerConnectivity
 
 class nameFormViewController: UIViewController{
     
-    var nickName: String?
+    var nickName = ""
     
     @IBAction func unwindToGame(segue: UIStoryboardSegue){}
-    @IBAction func  unwindToWinnerLogin(segue: UIStoryboardSegue){}
+
     @IBOutlet weak var nicknameTextField: UITextField!
 
     override func viewDidLoad() {
@@ -25,16 +25,26 @@ class nameFormViewController: UIViewController{
         
     }
     
-    @IBAction func playButtonPressed(sender: UIButton) {
-        nickName = nicknameTextField.text!
+    @IBAction func playButtonPressed() {
+        nickName = String(nicknameTextField.text!)
+        segue()
+    }
+
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
+
+            let navController = segue.destinationViewController as! UINavigationController
+            let controller = navController.topViewController as! ConnectionsTableViewController
+            
+            controller.nickName = nickName
+  
         
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        let destinationNavigationController = segue.destinationViewController as! UINavigationController
-//        let targetController = destinationNavigationController.topViewController
-//    }
+    func segue(){
+        self.performSegueWithIdentifier("connectionsTableViewSegue", sender: nil)
+    }
     
 }
 

@@ -67,9 +67,6 @@ class GameScene: SKScene {
                 myLabel.text = String("Score: \(self.maxValue)")
                 
                 defaults.setObject(maxValue, forKey : "High_Score")
-                var highScore = defaults.objectForKey("High_Score")
-
-                
             }
         }
         

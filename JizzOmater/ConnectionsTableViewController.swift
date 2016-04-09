@@ -11,13 +11,15 @@ import MultipeerConnectivity
 
 class ConnectionsTableViewController: UITableViewController {
 
+    var nickName: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("in table controller")
+        print(nickName!)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +27,15 @@ class ConnectionsTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    @IBAction func tableButtonPressed(sender: AnyObject) {
+        segue()
+        
+    }
+    
+    
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -43,6 +54,10 @@ class ConnectionsTableViewController: UITableViewController {
         // Configure the cell...
 
         return cell
+    }
+    
+    func segue(){
+        self.performSegueWithIdentifier("connectionsTableViewSegue", sender: self)
     }
 
 
