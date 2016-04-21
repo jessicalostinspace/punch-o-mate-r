@@ -13,8 +13,6 @@ import MultipeerConnectivity
 class nameFormViewController: UIViewController{
     
     var nickName = ""
-    
-    @IBAction func unwindToGame(segue: UIStoryboardSegue){}
 
     @IBOutlet weak var nicknameTextField: UITextField!
 
@@ -26,8 +24,24 @@ class nameFormViewController: UIViewController{
     }
     
     @IBAction func playButtonPressed() {
-        nickName = String(nicknameTextField.text!)
-        segue()
+        //if nickName is not empty, segue to connections scene
+        if !(nicknameTextField.text!.isEmpty) {
+            nickName = String(nicknameTextField.text!)
+            segue()
+        }
+        else{ //else present modal that prompts user to enter name
+            let alert = UIAlertController(title: "Jizz Time Error", message: "Please enter a nickname!", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let acceptAction: UIAlertAction = UIAlertAction(title: "Got it", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
+                
+            }
+            
+            alert.addAction(acceptAction)
+
+            NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+        }
     }
 
 

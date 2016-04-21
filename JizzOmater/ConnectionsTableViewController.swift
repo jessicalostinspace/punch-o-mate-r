@@ -9,104 +9,271 @@
 import UIKit
 import MultipeerConnectivity
 
-class ConnectionsTableViewController: UITableViewController {
+
+class ConnectionsTableViewController: UIViewController, UITableViewDataSource, MCSessionDelegate, MCNearbyServiceBrowserDelegate, MCNearbyServiceAdvertiserDelegate{
+    
+    @IBAction func unwindToGame(segue: UIStoryboardSegue){}
 
     var nickName: String?
     
+    @IBOutlet var connectionsTableView: UITableView!
+    
+    var isAdvertising: Bool!
+    var peer: MCPeerID!
+    var session: MCSession!
+    var mcAdvertiserAssistant: MCAdvertiserAssistant!
+    var browser: MCNearbyServiceBrowser!
+    var foundPeers = [MCPeerID]()
+    var advertiser: MCNearbyServiceAdvertiser!
+    var invitationHandler: (Bool, MCSession)->Void = { status, session in }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         print("in table controller")
         print(nickName!)
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-    }
+        
+//        showConnectionPrompt()
 
+        //peer name is name from input field
+        peer = MCPeerID(displayName: nickName!)
+        
+        //start session
+        session = MCSession(peer: peer, securityIdentity: nil, encryptionPreference: .Required)
+        session.delegate = self
+        
+        //set device as browser with unique connection "spermatazoa"
+        browser = MCNearbyServiceBrowser(peer: peer, serviceType: "spermatazoa")
+        browser.delegate = self
+        
+        browser.startBrowsingForPeers()
+        
+        //discoveryInfo, is a dictionary that can contain any kind of extra information you want to pass to the other peers upon discovery
+        advertiser = MCNearbyServiceAdvertiser(peer: peer, discoveryInfo: nil, serviceType: "spermatazoa")
+        advertiser.delegate = self
+        
+        advertiser.startAdvertisingPeer()
+        
+        //start advertising
+        isAdvertising = true
+        
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
-    @IBAction func tableButtonPressed(sender: AnyObject) {
-        segue()
-        
+    
+    @IBAction func playSoloButtonPressed(sender: AnyObject) {
+        self.performSegueWithIdentifier("connectionsTableViewSegue", sender: self)
     }
-    
-    
     
     
     // MARK: - Table view data source
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return foundPeers.count
     }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ConnectionsCell", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("ConnectionsCell")!
+        
+        cell.textLabel?.text = self.foundPeers[indexPath.row].displayName
+        
         return cell
     }
     
-    func segue(){
-        self.performSegueWithIdentifier("connectionsTableViewSegue", sender: self)
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let selectedPeer = foundPeers[indexPath.row] as MCPeerID
+        
+        //withContext: This parameter can be used if you want to send some extra data to the invited peer. It requires a NSData object.
+        browser.invitePeer(selectedPeer, toSession: session, withContext: nil, timeout: 20)
+    }
+    
+    // MARK: Advertiser delegate methods
+    
+    func advertiser(advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: NSData?, invitationHandler: (Bool, MCSession) -> Void){
+        
+        self.invitationHandler = invitationHandler
+        invitationWasReceived(peer.displayName)
+        
+    }
+    
+    func advertiser(advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: NSError) {
+        print(error.localizedDescription)
+    }
+    
+    //Change advertising settings
+    @IBAction func startStopAdvertising(sender: AnyObject) {
+        let actionSheet = UIAlertController(title: "", message: "Change Visibility", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        var actionTitle: String
+        if isAdvertising == true {
+            actionTitle = "Make me invisible to others"
+        }
+        else{
+            actionTitle = "Make me visible to others"
+        }
+        
+        //correct action Title allows peer to stop or start advertising
+        let visibilityAction: UIAlertAction = UIAlertAction(title: actionTitle, style: UIAlertActionStyle.Default) { (alertAction) -> Void in
+            if self.isAdvertising == true {
+                self.advertiser.stopAdvertisingPeer()
+            }
+            else{
+                self.advertiser.startAdvertisingPeer()
+            }
+            
+            self.isAdvertising = !self.isAdvertising
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (alertAction) -> Void in
+            
+        }
+        
+        actionSheet.addAction(visibilityAction)
+        actionSheet.addAction(cancelAction)
+        
+        self.presentViewController(actionSheet, animated: true, completion: nil)
     }
 
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    
+    //MARK: Session Delegate Methods
+    
+    func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
+        
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func session(session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, withProgress progress: NSProgress) {
+        
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
+    
+    func session(session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, atURL localURL: NSURL, withError error: NSError?) {
+        
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    
+//    func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
+//        switch state {
+//        case MCSessionState.Connected:
+//            print("Connected: \(peerID.displayName)")
+//            self.performSegueWithIdentifier("connectionsTableViewSegue", sender: self)
+//            
+//        case MCSessionState.Connecting:
+//            print("Connecting: \(peerID.displayName)")
+//            
+//        case MCSessionState.NotConnected:
+//            print("Not Connected: \(peerID.displayName)")
+//        }
+//    }
+    
+    func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
+        switch state{
+        case MCSessionState.Connected:
+            print("Connected to session: \(session)")
+            connectedWithPeer(peerID)
+            
+        case MCSessionState.Connecting:
+            print("Connecting to session: \(session)")
+            
+        default:
+            print("Did not connect to session: \(session)")
+        }
     }
-    */
+    
+    func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
+        //        if let image = UIImage(data: data) {
+        dispatch_async(dispatch_get_main_queue()) { [unowned self] in
+            //                self.images.insert(image, atIndex: 0)
+            self.connectionsTableView.reloadData()
+            //            }
+        }
+    }
+    
+    //MARK: Browser Delegate Methods
+    
+    // Found a nearby advertising peer.
+    func browser(browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?){
+        foundPeers.append(peerID)
 
+        print(foundPeers)
+        
+        connectionsTableView.reloadData()
+    }
+    
+    // A nearby peer has stopped advertising.
+    func browser(browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
+        for (index, aPeer) in foundPeers.enumerate(){
+            if aPeer == peerID {
+                foundPeers.removeAtIndex(index)
+                break
+            }
+        }
+        
+        connectionsTableView.reloadData()
+    }
+    //function prints error if not able to browse for peers
+    func browser(browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: NSError) {
+        print(error.localizedDescription)
+    }
+    
+    // The methods -startBrowsingForPeers and -stopBrowsingForPeers are used to
+    // start and stop looking for nearby advertising peers.
+    func startBrowsingForPeers(){
+        
+    }
+    
+    func stopBrowsingForPeers(){
+        
+    }
+    
 
+    // MARK: Invitation Handler
+    func invitationWasReceived(fromPeer: String) {
+        let alert = UIAlertController(title: "", message: "\(fromPeer) wants to jizz on you!", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let acceptAction: UIAlertAction = UIAlertAction(title: "Bring it on", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
+            self.invitationHandler(true, self.session)
+        }
+        
+        let declineAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (alertAction) -> Void in
+            self.invitationHandler(false, self.session)
+        }
+        
+        alert.addAction(acceptAction)
+        alert.addAction(declineAction)
+        
+        NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-// connectionsToGameSegue
+        // connectionsToGameSegue
         
         //        let destinationNavigationController = segue.destinationViewController as! UINavigationController
         //        let targetController = destinationNavigationController.topViewController
         //    }
     }
-
-
+    
+    //When connected, segue to next view controller
+    func connectedWithPeer(peerID: MCPeerID) {
+        NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
+            self.performSegueWithIdentifier("connectionsTableViewSegue", sender: self)
+        }
+    }
+    
+    
 }

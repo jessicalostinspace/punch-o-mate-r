@@ -25,7 +25,8 @@ class FinalViewController: UIViewController {
         super.viewDidLoad()
 
         scoreLabel.text = "Score: \(maxValue)"
-        // Do any additional setup after loading the view.
+        setImage()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,5 +46,14 @@ class FinalViewController: UIViewController {
         }
     }
     
+    func setImage(){
+        if maxValue > 500{
+            finalImage.image = UIImage(named: "retroNude\(Int(arc4random_uniform(7) + 1))")
+        }
+        else{
+            finalImage.image = UIImage(named: "loser")
+        }
+        
+    }
 
 }
