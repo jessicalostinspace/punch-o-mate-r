@@ -48,7 +48,7 @@ class FinalViewController: UIViewController {
     
     func setImage(){
         if maxValue > 500{
-            finalImage.image = UIImage(named: "retroNude\(Int(arc4random_uniform(7) + 1))")
+            finalImage.image = UIImage(named: "boxingWinner")
         }
         else{
             finalImage.image = UIImage(named: "knockout\(Int(arc4random_uniform(3) + 1))")
