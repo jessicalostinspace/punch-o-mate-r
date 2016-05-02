@@ -31,11 +31,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="zy9-kQ-siP">
                         <barButtonItem key="leftBarButtonItem" title="Visibility" id="9jj-ET-ahZ">
+                            <color key="tintColor" red="0.0" green="0.58639823719999995" blue="0.58090852019999994" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="startStopAdvertising:" destination="Rrb-KH-uyg" id="jqV-ZD-8hh"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Play Solo" id="rQK-Gd-9zY">
+                            <color key="tintColor" red="0.0" green="0.58639823719999995" blue="0.58090852019999994" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="playSoloButtonPressed:" destination="Rrb-KH-uyg" id="YCY-aO-jDg"/>
                             </connections>
@@ -92,7 +94,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loser" translatesAutoresizingMaskIntoConstraints="NO" id="1ZF-yQ-PgZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="knockout3" translatesAutoresizingMaskIntoConstraints="NO" id="1ZF-yQ-PgZ">
                                 <rect key="frame" x="20" y="155" width="560" height="425"/>
                             </imageView>
                         </subviews>
@@ -109,7 +111,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="dNY-XX-IwZ">
                         <barButtonItem key="leftBarButtonItem" title="Play Again" id="LQM-HM-zZ7">
-                            <color key="tintColor" red="0.55764863506058393" green="0.85057531301750178" blue="0.90332532051282055" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.0" green="0.58639823719999995" blue="0.58090852019999994" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="playAgainButtonPressed:" destination="sp6-va-lzA" id="9Zz-B6-exg"/>
                             </connections>
@@ -141,7 +143,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Nickname: " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smm-Hw-sX8">
                                 <rect key="frame" x="20" y="81" width="565" height="36.5"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="31"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.58639823719999995" blue="0.58090852019999994" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="67C-zO-7W8">
@@ -151,11 +153,11 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGg-E5-p9V">
                                 <rect key="frame" x="20" y="219" width="560" height="45"/>
-                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.58639823719999995" blue="0.58090852019999994" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="28"/>
                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
-                                <state key="normal" title="Jizz Time!">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Punch Time!">
+                                    <color key="titleColor" red="0.96869661340000002" green="0.98805522420000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -226,6 +228,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="loser" width="189" height="109"/>
+        <image name="knockout3" width="500" height="325"/>
     </resources>
 </document>

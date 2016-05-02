@@ -51,7 +51,7 @@ class FinalViewController: UIViewController {
             finalImage.image = UIImage(named: "retroNude\(Int(arc4random_uniform(7) + 1))")
         }
         else{
-            finalImage.image = UIImage(named: "loser")
+            finalImage.image = UIImage(named: "knockout\(Int(arc4random_uniform(3) + 1))")
         }
         
     }
