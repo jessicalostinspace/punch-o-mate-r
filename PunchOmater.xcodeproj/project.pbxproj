@@ -15,7 +15,7 @@
 		FC05D9B31C978EC4006FB570 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05D9B11C978EC4006FB570 /* Main.storyboard */; };
 		FC05D9B51C978EC4006FB570 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC05D9B41C978EC4006FB570 /* Assets.xcassets */; };
 		FC05D9B81C978EC4006FB570 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05D9B61C978EC4006FB570 /* LaunchScreen.storyboard */; };
-		FC05D9C31C978EC4006FB570 /* JizzOmaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05D9C21C978EC4006FB570 /* JizzOmaterTests.swift */; };
+		FC05D9C31C978EC4006FB570 /* PunchOmaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05D9C21C978EC4006FB570 /* PunchOmaterTests.swift */; };
 		FC05D9CE1C978EC4006FB570 /* JizzOmaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05D9CD1C978EC4006FB570 /* JizzOmaterUITests.swift */; };
 		FC05D9DC1C9792BC006FB570 /* nameFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05D9DB1C9792BC006FB570 /* nameFormViewController.swift */; };
 		FC7A31F21CB4E630008BDF08 /* ConnectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7A31F11CB4E630008BDF08 /* ConnectionsTableViewController.swift */; };
@@ -43,7 +43,7 @@
 		3C3BC255F069B7A62DBDB901 /* Pods-JizzOmater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JizzOmater.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JizzOmater/Pods-JizzOmater.debug.xcconfig"; sourceTree = "<group>"; };
 		B3647CBF165B90B03DD91DE4 /* Pods-JizzOmater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JizzOmater.release.xcconfig"; path = "Pods/Target Support Files/Pods-JizzOmater/Pods-JizzOmater.release.xcconfig"; sourceTree = "<group>"; };
 		D9A960A9F37539BD86AB2A43 /* Pods_JizzOmater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JizzOmater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC05D9A61C978EC4006FB570 /* JizzOmater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JizzOmater.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC05D9A61C978EC4006FB570 /* PunchOmater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PunchOmater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC05D9A91C978EC4006FB570 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC05D9AB1C978EC4006FB570 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		FC05D9AD1C978EC4006FB570 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -52,10 +52,10 @@
 		FC05D9B41C978EC4006FB570 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC05D9B71C978EC4006FB570 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC05D9B91C978EC4006FB570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC05D9BE1C978EC4006FB570 /* JizzOmaterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JizzOmaterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC05D9C21C978EC4006FB570 /* JizzOmaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JizzOmaterTests.swift; sourceTree = "<group>"; };
+		FC05D9BE1C978EC4006FB570 /* PunchOmater.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PunchOmater.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC05D9C21C978EC4006FB570 /* PunchOmaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunchOmaterTests.swift; sourceTree = "<group>"; };
 		FC05D9C41C978EC4006FB570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC05D9C91C978EC4006FB570 /* JizzOmaterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JizzOmaterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC05D9C91C978EC4006FB570 /* PunchOmater.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PunchOmater.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC05D9CD1C978EC4006FB570 /* JizzOmaterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JizzOmaterUITests.swift; sourceTree = "<group>"; };
 		FC05D9CF1C978EC4006FB570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC05D9DB1C9792BC006FB570 /* nameFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nameFormViewController.swift; sourceTree = "<group>"; };
@@ -109,8 +109,8 @@
 		FC05D99D1C978EC4006FB570 = {
 			isa = PBXGroup;
 			children = (
-				FC05D9A81C978EC4006FB570 /* JizzOmater */,
-				FC05D9C11C978EC4006FB570 /* JizzOmaterTests */,
+				FC05D9A81C978EC4006FB570 /* PunchOmater */,
+				FC05D9C11C978EC4006FB570 /* PunchOmaterTests */,
 				FC05D9CC1C978EC4006FB570 /* JizzOmaterUITests */,
 				FC05D9A71C978EC4006FB570 /* Products */,
 				C49953B9FC807DBFBDA7A947 /* Pods */,
@@ -121,14 +121,14 @@
 		FC05D9A71C978EC4006FB570 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FC05D9A61C978EC4006FB570 /* JizzOmater.app */,
-				FC05D9BE1C978EC4006FB570 /* JizzOmaterTests.xctest */,
-				FC05D9C91C978EC4006FB570 /* JizzOmaterUITests.xctest */,
+				FC05D9A61C978EC4006FB570 /* PunchOmater.app */,
+				FC05D9BE1C978EC4006FB570 /* PunchOmater.xctest */,
+				FC05D9C91C978EC4006FB570 /* PunchOmater.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FC05D9A81C978EC4006FB570 /* JizzOmater */ = {
+		FC05D9A81C978EC4006FB570 /* PunchOmater */ = {
 			isa = PBXGroup;
 			children = (
 				FC05D9A91C978EC4006FB570 /* AppDelegate.swift */,
@@ -143,15 +143,17 @@
 				FC05D9B61C978EC4006FB570 /* LaunchScreen.storyboard */,
 				FC05D9B91C978EC4006FB570 /* Info.plist */,
 			);
+			name = PunchOmater;
 			path = JizzOmater;
 			sourceTree = "<group>";
 		};
-		FC05D9C11C978EC4006FB570 /* JizzOmaterTests */ = {
+		FC05D9C11C978EC4006FB570 /* PunchOmaterTests */ = {
 			isa = PBXGroup;
 			children = (
-				FC05D9C21C978EC4006FB570 /* JizzOmaterTests.swift */,
+				FC05D9C21C978EC4006FB570 /* PunchOmaterTests.swift */,
 				FC05D9C41C978EC4006FB570 /* Info.plist */,
 			);
+			name = PunchOmaterTests;
 			path = JizzOmaterTests;
 			sourceTree = "<group>";
 		};
@@ -167,9 +169,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FC05D9A51C978EC4006FB570 /* JizzOmater */ = {
+		FC05D9A51C978EC4006FB570 /* PunchOmater */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC05D9D21C978EC4006FB570 /* Build configuration list for PBXNativeTarget "JizzOmater" */;
+			buildConfigurationList = FC05D9D21C978EC4006FB570 /* Build configuration list for PBXNativeTarget "PunchOmater" */;
 			buildPhases = (
 				D85C3348066CEDA02957754E /* Check Pods Manifest.lock */,
 				FC05D9A21C978EC4006FB570 /* Sources */,
@@ -182,14 +184,14 @@
 			);
 			dependencies = (
 			);
-			name = JizzOmater;
+			name = PunchOmater;
 			productName = JizzOmater;
-			productReference = FC05D9A61C978EC4006FB570 /* JizzOmater.app */;
+			productReference = FC05D9A61C978EC4006FB570 /* PunchOmater.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FC05D9BD1C978EC4006FB570 /* JizzOmaterTests */ = {
+		FC05D9BD1C978EC4006FB570 /* PunchOmaterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC05D9D51C978EC4006FB570 /* Build configuration list for PBXNativeTarget "JizzOmaterTests" */;
+			buildConfigurationList = FC05D9D51C978EC4006FB570 /* Build configuration list for PBXNativeTarget "PunchOmaterTests" */;
 			buildPhases = (
 				FC05D9BA1C978EC4006FB570 /* Sources */,
 				FC05D9BB1C978EC4006FB570 /* Frameworks */,
@@ -200,14 +202,14 @@
 			dependencies = (
 				FC05D9C01C978EC4006FB570 /* PBXTargetDependency */,
 			);
-			name = JizzOmaterTests;
+			name = PunchOmaterTests;
 			productName = JizzOmaterTests;
-			productReference = FC05D9BE1C978EC4006FB570 /* JizzOmaterTests.xctest */;
+			productReference = FC05D9BE1C978EC4006FB570 /* PunchOmater.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FC05D9C81C978EC4006FB570 /* JizzOmaterUITests */ = {
+		FC05D9C81C978EC4006FB570 /* PunchOmaterUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC05D9D81C978EC4006FB570 /* Build configuration list for PBXNativeTarget "JizzOmaterUITests" */;
+			buildConfigurationList = FC05D9D81C978EC4006FB570 /* Build configuration list for PBXNativeTarget "PunchOmaterUITests" */;
 			buildPhases = (
 				FC05D9C51C978EC4006FB570 /* Sources */,
 				FC05D9C61C978EC4006FB570 /* Frameworks */,
@@ -218,9 +220,9 @@
 			dependencies = (
 				FC05D9CB1C978EC4006FB570 /* PBXTargetDependency */,
 			);
-			name = JizzOmaterUITests;
+			name = PunchOmaterUITests;
 			productName = JizzOmaterUITests;
-			productReference = FC05D9C91C978EC4006FB570 /* JizzOmaterUITests.xctest */;
+			productReference = FC05D9C91C978EC4006FB570 /* PunchOmater.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -247,7 +249,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FC05D9A11C978EC4006FB570 /* Build configuration list for PBXProject "JizzOmater" */;
+			buildConfigurationList = FC05D9A11C978EC4006FB570 /* Build configuration list for PBXProject "PunchOmater" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -260,9 +262,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FC05D9A51C978EC4006FB570 /* JizzOmater */,
-				FC05D9BD1C978EC4006FB570 /* JizzOmaterTests */,
-				FC05D9C81C978EC4006FB570 /* JizzOmaterUITests */,
+				FC05D9A51C978EC4006FB570 /* PunchOmater */,
+				FC05D9BD1C978EC4006FB570 /* PunchOmaterTests */,
+				FC05D9C81C978EC4006FB570 /* PunchOmaterUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -361,7 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC05D9C31C978EC4006FB570 /* JizzOmaterTests.swift in Sources */,
+				FC05D9C31C978EC4006FB570 /* PunchOmaterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,12 +380,12 @@
 /* Begin PBXTargetDependency section */
 		FC05D9C01C978EC4006FB570 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FC05D9A51C978EC4006FB570 /* JizzOmater */;
+			target = FC05D9A51C978EC4006FB570 /* PunchOmater */;
 			targetProxy = FC05D9BF1C978EC4006FB570 /* PBXContainerItemProxy */;
 		};
 		FC05D9CB1C978EC4006FB570 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FC05D9A51C978EC4006FB570 /* JizzOmater */;
+			target = FC05D9A51C978EC4006FB570 /* PunchOmater */;
 			targetProxy = FC05D9CA1C978EC4006FB570 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -502,7 +504,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.JizzOmater;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PunchOmater;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -518,7 +520,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.JizzOmater;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PunchOmater;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -531,8 +533,8 @@
 				INFOPLIST_FILE = JizzOmaterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.JizzOmaterTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JizzOmater.app/JizzOmater";
+				PRODUCT_NAME = PunchOmater;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PunchOmater.app/PunchOmater";
 			};
 			name = Debug;
 		};
@@ -543,8 +545,8 @@
 				INFOPLIST_FILE = JizzOmaterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.JizzOmaterTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JizzOmater.app/JizzOmater";
+				PRODUCT_NAME = PunchOmater;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PunchOmater.app/PunchOmater";
 			};
 			name = Release;
 		};
@@ -555,7 +557,7 @@
 				INFOPLIST_FILE = JizzOmaterUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.JizzOmaterUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PunchOmater;
 				TEST_TARGET_NAME = JizzOmater;
 				USES_XCTRUNNER = YES;
 			};
@@ -567,7 +569,7 @@
 				INFOPLIST_FILE = JizzOmaterUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.JizzOmaterUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PunchOmater;
 				TEST_TARGET_NAME = JizzOmater;
 				USES_XCTRUNNER = YES;
 			};
@@ -576,7 +578,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FC05D9A11C978EC4006FB570 /* Build configuration list for PBXProject "JizzOmater" */ = {
+		FC05D9A11C978EC4006FB570 /* Build configuration list for PBXProject "PunchOmater" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC05D9D01C978EC4006FB570 /* Debug */,
@@ -585,7 +587,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC05D9D21C978EC4006FB570 /* Build configuration list for PBXNativeTarget "JizzOmater" */ = {
+		FC05D9D21C978EC4006FB570 /* Build configuration list for PBXNativeTarget "PunchOmater" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC05D9D31C978EC4006FB570 /* Debug */,
@@ -594,7 +596,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC05D9D51C978EC4006FB570 /* Build configuration list for PBXNativeTarget "JizzOmaterTests" */ = {
+		FC05D9D51C978EC4006FB570 /* Build configuration list for PBXNativeTarget "PunchOmaterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC05D9D61C978EC4006FB570 /* Debug */,
@@ -603,7 +605,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC05D9D81C978EC4006FB570 /* Build configuration list for PBXNativeTarget "JizzOmaterUITests" */ = {
+		FC05D9D81C978EC4006FB570 /* Build configuration list for PBXNativeTarget "PunchOmaterUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC05D9D91C978EC4006FB570 /* Debug */,

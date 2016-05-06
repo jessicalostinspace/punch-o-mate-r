@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FC05D9A51C978EC4006FB570"
-               BuildableName = "JizzOmater.app"
-               BlueprintName = "JizzOmater"
-               ReferencedContainer = "container:JizzOmater.xcodeproj">
+               BuildableName = "PunchOmater.app"
+               BlueprintName = "PunchOmater"
+               ReferencedContainer = "container:PunchOmater.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FC05D9BD1C978EC4006FB570"
-               BuildableName = "JizzOmaterTests.xctest"
-               BlueprintName = "JizzOmaterTests"
-               ReferencedContainer = "container:JizzOmater.xcodeproj">
+               BuildableName = "PunchOmater.xctest"
+               BlueprintName = "PunchOmaterTests"
+               ReferencedContainer = "container:PunchOmater.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FC05D9C81C978EC4006FB570"
-               BuildableName = "JizzOmaterUITests.xctest"
-               BlueprintName = "JizzOmaterUITests"
-               ReferencedContainer = "container:JizzOmater.xcodeproj">
+               BuildableName = "PunchOmater.xctest"
+               BlueprintName = "PunchOmaterUITests"
+               ReferencedContainer = "container:PunchOmater.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FC05D9A51C978EC4006FB570"
-            BuildableName = "JizzOmater.app"
-            BlueprintName = "JizzOmater"
-            ReferencedContainer = "container:JizzOmater.xcodeproj">
+            BuildableName = "PunchOmater.app"
+            BlueprintName = "PunchOmater"
+            ReferencedContainer = "container:PunchOmater.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FC05D9A51C978EC4006FB570"
-            BuildableName = "JizzOmater.app"
-            BlueprintName = "JizzOmater"
-            ReferencedContainer = "container:JizzOmater.xcodeproj">
+            BuildableName = "PunchOmater.app"
+            BlueprintName = "PunchOmater"
+            ReferencedContainer = "container:PunchOmater.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FC05D9A51C978EC4006FB570"
-            BuildableName = "JizzOmater.app"
-            BlueprintName = "JizzOmater"
-            ReferencedContainer = "container:JizzOmater.xcodeproj">
+            BuildableName = "PunchOmater.app"
+            BlueprintName = "PunchOmater"
+            ReferencedContainer = "container:PunchOmater.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

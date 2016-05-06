@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import JizzOmater
+@testable import PunchOmater
 
-class JizzOmaterTests: XCTestCase {
+class PunchOmaterTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

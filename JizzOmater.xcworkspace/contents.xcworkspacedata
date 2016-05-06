@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:JizzOmater.xcodeproj">
+      location = "group:/Users/JessicaW/Desktop/curr iOS Projects/punch-o-mate-r/PunchOmater.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
